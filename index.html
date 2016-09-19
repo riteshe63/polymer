@@ -1,26 +1,231 @@
-<!doctype html>
-<!--
-Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE
-The complete set of authors may be found at http://polymer.github.io/AUTHORS
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS
--->
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Polymer by riteshe63</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Polymer</h1>
+      <h2 class="project-tagline">Test Ritesh</h2>
+      <a href="https://github.com/riteshe63/polymer" class="btn">View on GitHub</a>
+      <a href="https://github.com/riteshe63/polymer/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/riteshe63/polymer/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <section class="main-content">
+      <h1>
+<a id="polymer" class="anchor" href="#polymer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Polymer</h1>
 
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-  <link rel="import" href="bower_components/iron-component-page/iron-component-page.html">
+<p><a href="https://travis-ci.org/Polymer/polymer"><img src="https://travis-ci.org/Polymer/polymer.svg?branch=master" alt="Build Status"></a></p>
 
-</head>
-<body>
+<p>Polymer lets you build encapsulated, re-usable elements that work just like standard HTML elements, to use in building web applications.</p>
 
-  <!-- RawGit is awesome! See: https://rawgit.com/ -->
-  <iron-component-page no-demo src="https://cdn.rawgit.com/Polymer/polymer/master/polymer.html"></iron-component-page>
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Polyfill Web Components for older browsers --&gt;</span>
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>webcomponentsjs/webcomponents-lite.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 
-</body>
+<span class="pl-c">&lt;!-- Import element --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>import<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>google-map.html<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Use element --&gt;</span>
+&lt;<span class="pl-ent">google</span><span class="pl-e">-map</span> <span class="pl-e">latitude</span>=<span class="pl-s"><span class="pl-pds">"</span>37.790<span class="pl-pds">"</span></span> <span class="pl-e">longitude</span>=<span class="pl-s"><span class="pl-pds">"</span>-122.390<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">google</span><span class="pl-e">-map</span>&gt;</pre></div>
+
+<p>Check out <a href="https://www.polymer-project.org">polymer-project.org</a> for all of the library documentation, including getting started guides, tutorials, developer reference, and more.</p>
+
+<p>Or if you'd just like to download the library, check out our <a href="https://github.com/polymer/polymer/releases">releases page</a>.</p>
+
+<h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h2>
+
+<p>Polymer is a lightweight library built on top of the web standards-based <a href="http://webcomponents.org/">Web Components</a> API's, and makes it easier to build your very own custom HTML elements. Creating re-usable custom elements - and using elements built by others - can make building complex web applications easier and more efficient. By being based on the Web Components API's built in the browser (or <a href="https://github.com/webcomponents/webcomponentsjs">polyfilled</a> where needed), Polymer elements are interoperable at the browser level, and can be used with other frameworks or libraries that work with modern browsers.</p>
+
+<p>Among many ways to leverage custom elements, they can be particularly useful for building re-usable UI components. Instead of continually re-building a specific navigation bar or button in different frameworks and for different projects, you can define this element once using Polymer, and then reuse it throughout your project or in any future project.</p>
+
+<p>Polymer provides a declarative syntax to easily create your own custom elements, using all standard web technologies - define the structure of the element with HTML, style it with CSS, and add interactions to the element with JavaScript. </p>
+
+<p>Polymer also provides optional two-way data-binding, meaning:</p>
+
+<ol>
+<li>When properties in the model for an element get updated, the element can update itself in response.</li>
+<li>When the element is updated internally, the changes can be propagated back to the model.</li>
+</ol>
+
+<p>Polymer is designed to be flexible, lightweight, and close to the web platform - the library doesn't invent complex new abstractions and magic, but uses the best features of the web platform in straightforward ways to simply sugar the creation of custom elements.</p>
+
+<p>In addition to the Polymer library for building your own custom elements, the Polymer project includes a collection of <a href="https://elements.polymer-project.org">pre-built elements</a> that you can  drop on a page and use immediately, or use as starting points for your own custom elements.</p>
+
+<h2>
+<a id="polymer-in-1-minute" class="anchor" href="#polymer-in-1-minute" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Polymer in 1 Minute</h2>
+
+<p>Polymer adds convenient features to make it easy to build complex elements:</p>
+
+<p><strong>Create and register a custom element</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">/**</span>
+<span class="pl-c"> * A not-very-useful inline element</span>
+<span class="pl-c"> */</span>
+<span class="pl-en">Polymer</span>({
+    is<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>my-element<span class="pl-pds">'</span></span>
+});</pre></div>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- use the element --&gt;</span>
+&lt;<span class="pl-ent">my</span><span class="pl-e">-element</span>&gt;&lt;/<span class="pl-ent">my</span><span class="pl-e">-element</span>&gt;</pre></div>
+
+<p><strong>Add markup to your element</strong></p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- define the markup that your element will use --&gt;</span>
+&lt;<span class="pl-ent">dom</span><span class="pl-e">-module</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>my-simple-namecard<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">template</span>&gt;
+    &lt;<span class="pl-ent">div</span>&gt;
+      Hi! My name is &lt;<span class="pl-ent">span</span>&gt;Jane&lt;/<span class="pl-ent">span</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+  &lt;/<span class="pl-ent">template</span>&gt;
+
+<span class="pl-s1">  &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-en">Polymer</span>({</span>
+<span class="pl-s1">        is<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>my-simple-namecard<span class="pl-pds">'</span></span></span>
+<span class="pl-s1">    });</span>
+<span class="pl-s1">  &lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">dom</span><span class="pl-e">-module</span>&gt;</pre></div>
+
+<p><strong>Configure properties on your element...</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// Create an element that takes a property</span>
+<span class="pl-en">Polymer</span>({
+    is<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>my-property-namecard<span class="pl-pds">'</span></span>,
+    properties<span class="pl-k">:</span> {
+      myName<span class="pl-k">:</span> {
+        type<span class="pl-k">:</span> <span class="pl-c1">String</span>
+      }
+    },
+    <span class="pl-en">ready</span><span class="pl-k">:</span> <span class="pl-k">function</span>() {
+      <span class="pl-v">this</span>.<span class="pl-smi">textContent</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Hi! My name is <span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-v">this</span>.<span class="pl-smi">myName</span>;
+    }
+});</pre></div>
+
+<p><strong>...and have them set using declarative attributes</strong></p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- using the element --&gt;</span>
+&lt;<span class="pl-ent">my</span><span class="pl-e">-property-namecard</span> <span class="pl-e">my-name</span>=<span class="pl-s"><span class="pl-pds">"</span>Jim<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">my</span><span class="pl-e">-property-namecard</span>&gt;</pre></div>
+
+<blockquote>
+<p>Hi! My name is Jim</p>
+</blockquote>
+
+<p><strong>Bind data into your element using the familiar mustache-syntax</strong></p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- define markup with bindings --&gt;</span>
+&lt;<span class="pl-ent">dom</span><span class="pl-e">-module</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>my-bound-namecard<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">template</span>&gt;
+    &lt;<span class="pl-ent">div</span>&gt;
+      Hi! My name is &lt;<span class="pl-ent">span</span>&gt;{{myName}}&lt;/<span class="pl-ent">span</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+  &lt;/<span class="pl-ent">template</span>&gt;
+
+<span class="pl-s1">  &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-en">Polymer</span>({</span>
+<span class="pl-s1">      is<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>my-bound-namecard<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">      properties<span class="pl-k">:</span> {</span>
+<span class="pl-s1">        myName<span class="pl-k">:</span> {</span>
+<span class="pl-s1">          type<span class="pl-k">:</span> <span class="pl-c1">String</span></span>
+<span class="pl-s1">        }</span>
+<span class="pl-s1">      }</span>
+<span class="pl-s1">    });</span>
+<span class="pl-s1">  &lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">dom</span><span class="pl-e">-module</span>&gt;</pre></div>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- using the element --&gt;</span>
+&lt;<span class="pl-ent">my</span><span class="pl-e">-bound-namecard</span> <span class="pl-e">my-name</span>=<span class="pl-s"><span class="pl-pds">"</span>Josh<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">my</span><span class="pl-e">-bound-namecard</span>&gt;</pre></div>
+
+<blockquote>
+<p>Hi! My name is Josh</p>
+</blockquote>
+
+<p><strong>Style the internals of your element, without the style leaking out</strong></p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- add style to your element --&gt;</span>
+&lt;<span class="pl-ent">dom</span><span class="pl-e">-module</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>my-styled-namecard<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">template</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">style</span>&gt;</span>
+<span class="pl-s1">      <span class="pl-c">/* This would be crazy in non webcomponents. */</span></span>
+<span class="pl-s1">      <span class="pl-ent">span</span> {</span>
+<span class="pl-s1">        <span class="pl-c1"><span class="pl-c1">font-weight</span></span>: <span class="pl-c1">bold</span>;</span>
+<span class="pl-s1">      }</span>
+<span class="pl-s1">    &lt;/<span class="pl-ent">style</span>&gt;</span>
+
+    &lt;<span class="pl-ent">div</span>&gt;
+      Hi! My name is &lt;<span class="pl-ent">span</span>&gt;{{myName}}&lt;/<span class="pl-ent">span</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+  &lt;/<span class="pl-ent">template</span>&gt;
+
+<span class="pl-s1">  &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-en">Polymer</span>({</span>
+<span class="pl-s1">      is<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>my-styled-namecard<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">      properties<span class="pl-k">:</span> {</span>
+<span class="pl-s1">        myName<span class="pl-k">:</span> {</span>
+<span class="pl-s1">          type<span class="pl-k">:</span> <span class="pl-c1">String</span></span>
+<span class="pl-s1">        }</span>
+<span class="pl-s1">      }</span>
+<span class="pl-s1">    });</span>
+<span class="pl-s1">  &lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">dom</span><span class="pl-e">-module</span>&gt;</pre></div>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- using the element --&gt;</span>
+&lt;<span class="pl-ent">my</span><span class="pl-e">-styled-namecard</span> <span class="pl-e">my-name</span>=<span class="pl-s"><span class="pl-pds">"</span>Jesse<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">my</span><span class="pl-e">-styled-namecard</span>&gt;</pre></div>
+
+<blockquote>
+<p>Hi! My name is <strong>Jesse</strong></p>
+</blockquote>
+
+<p><strong>and so much more!</strong></p>
+
+<p>Web components are an incredibly powerful new set of primitives baked into the web platform, and open up a whole new world of possibility when it comes to componentizing front-end code and easily creating powerful, immersive, app-like experiences on the web.</p>
+
+<p>By being based on Web Components, elements built with Polymer are:</p>
+
+<ul>
+<li>Built from the platform up</li>
+<li>Self-contained</li>
+<li>Don't require an overarching framework - are interoperable across frameworks</li>
+<li>Re-usable</li>
+</ul>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>The Polymer team loves contributions from the community! Take a look at our <a href="CONTRIBUTING.md">contributing guide</a> for more information on how to contribute.</p>
+
+<h2>
+<a id="communicating-with-the-polymer-team" class="anchor" href="#communicating-with-the-polymer-team" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Communicating with the Polymer team</h2>
+
+<p>Beyond Github, we try to have a variety of different lines of communication available:</p>
+
+<ul>
+<li><a href="https://blog.polymer-project.org/">Blog</a></li>
+<li><a href="https://twitter.com/polymer">Twitter</a></li>
+<li><a href="https://plus.google.com/communities/115626364525706131031">Google+ community</a></li>
+<li><a href="https://groups.google.com/forum/#!forum/polymer-dev">Mailing list</a></li>
+<li><a href="https://bit.ly/polymerslack">Slack channel</a></li>
+</ul>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
+
+<p>The Polymer library uses a BSD-like license available <a href="./LICENSE.txt">here</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/riteshe63/polymer">Polymer</a> is maintained by <a href="https://github.com/riteshe63">riteshe63</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
 </html>
